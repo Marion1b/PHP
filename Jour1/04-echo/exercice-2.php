@@ -16,7 +16,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Exercice 2 echo</title>
-		<link rel="stylesheet" href="style.css" />
 	</head>
     <style>
         .red {
