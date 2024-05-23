@@ -1,0 +1,51 @@
+### Produits
+
+| id | nom       | prix |
+|----|-----------|------|
+| 1  | banane    | 15   |
+| 2  | casquette | 20   |
+
+### Catégories
+
+| id | nom         | description             |
+|----|-------------|-------------------------|
+| 1  | sacs        | description des sacs    |
+| 2  | couvre-chef | description couvre-chef |
+
+
+### Produits_catégories
+
+| produit | categorie |
+|---------|-----------|
+| 1       | 1         |
+| 2       | 2         |
+
+### Utilisateurs
+
+| id | prenom | nom      | email           | livraison | facturation |
+|----|--------|----------|-----------------|-----------|-------------|
+| 1  | Shrek  | DuMarais | shrek@gmail.com | 1         | 2           |
+| 2  | L'âne  | deShrek  | lane@gmail.com  | 3         | 2           |
+
+### Adresse
+
+| id | numero | rue              | code postal | ville              |
+|----|--------|------------------|-------------|--------------------|
+| 1  | 1      | Place du Marais  | 09876       | Le Marais          |
+| 2  | 34     | Place du Château | 02000       | Fort Fort Lointain |
+| 3  | 3      | Place du Marais  | 09876       | Le Marais          |
+
+### Commandes
+
+| id | utilisateur |
+|----|-------------|
+| 1  | 1           |
+| 2  | 2           |
+
+### Commandes_produits
+
+| commande | produit |
+|----------|---------|
+| 1        | 2       |
+| 2        | 34      |
+
