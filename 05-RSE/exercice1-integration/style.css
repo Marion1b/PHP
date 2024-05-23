@@ -1,0 +1,212 @@
+:root{
+    --darker-grey: #0b132b;
+    --darkGrey : #1c2541;
+    --yellow : #d4b52f;
+    --green: #509d77;
+    --pink : #d97ab5;
+    --blue : #45a0ec;
+    --purple : #9e87cb;
+    --red : #d66f75;
+    --grey : #83a1bb;
+    --white : #ffffff;
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--darkGrey);
+    color: var(--white);
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+.yellow{
+    color: var(--yellow);
+}
+
+.pink{
+    color: var(--pink);
+}
+
+.blue{
+    color: var(--blue);
+}
+
+header{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-header{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.all-league{
+    text-align: center;
+    background: url('https://media.discordapp.net/attachments/1202537760788054076/1243180569941115022/home_background.png?ex=665089a1&is=664f3821&hm=732f4270af1c5e5d7aa6ed1fc7a2d8a94932960f8a63ffed6acc6729b8906bc1&=&format=webp&quality=lossless&width=902&height=507');
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.all-league h2{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.all-league h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.spotlight h2{
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin: 50px;
+}
+
+.spotlight h3{
+    font-weight: bolder;
+    margin-bottom: 20px ;
+}
+
+.spotlight img{
+    width: 250px;
+}
+
+.spotlight-angry-owls{
+    border: var(--grey) 1px solid;
+    padding: 30px;
+    width: 90%;
+    margin: auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.spotlight-list{
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.spotlight-list img{
+    width: 150px;
+    margin-top: 20px;
+}
+
+.spotlight p{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.spotlight-player{
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.players{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.players-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.players-card{
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid var(--grey);
+}
+
+.players-card .uppercase{
+    font-size: 24px;
+    margin: 10px;
+}
+
+.players-list img{
+    width: 250px;
+}
+
+.last-match{
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.last-match-article{
+    border: 1px solid var(--grey);
+    margin: 20px;
+    padding: 20px 50px;
+}
+
+.last-match h3{
+    font-weight: bold;
+    margin: 20px;
+    font-size: 24px;
+}
+
+.last-match p{
+    font-size: 10px;
+    color: var(--grey);
+    margin: 20px;
+}
+
+.last-match-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.last-match img{
+    width: 350px;
+    padding: 10px;
+}
+
+.winner{
+    border: 1px solid var(--green);
+}
+
+.loser{
+    border: 1px solid var(--grey);
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
