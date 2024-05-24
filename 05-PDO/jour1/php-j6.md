@@ -64,13 +64,13 @@ $parameters = [
     'id' => $_GET['id']
 ];
 $query->execute($parameters);
-$movie = $query->fetch(PDO::FETCH_ASSOC);
+$user = $query->fetch(PDO::FETCH_ASSOC);
 ```
 
 Si `$_GET['id']` vaut `2`, le résultat sera :
 
 ```php
-$movie = [
+$user = [
     'id' => 2,
     'first_name' => 'Clark',
     'last_name' => 'Kent'
@@ -92,13 +92,13 @@ Si vous en avez plusieurs, utilisez `fetchAll`.
 ```php
 $query = $db->prepare('SELECT * FROM users');
 $query->execute();
-$movies = $query->fetchAll(PDO::FETCH_ASSOC);
+$users = $query->fetchAll(PDO::FETCH_ASSOC);
 ```
 
 Le résultat serait :
 
 ```php
-$movies = [
+$users = [
     [
         'id' => 1,
         'first_name' => 'Steve',
@@ -112,6 +112,33 @@ $movies = [
 ];
 ```
 
+
+---
+
+# Executer une requête 
+
+Pour les requêtes qui ne contiennent pas de `SELECT`, pas besoin d'utiliser `fetch`, vous allez simplement executer la requête :
+
+```php
+$query = $db->prepare("INSERT INTO users (id, first_name, last_name) VALUES (NULL, ':first_name', ':last_name')");
+$parameters = [
+    'first_name' => 'Tony',
+    'last_name' => 'Stark'
+];
+$query->execute($parameters);
+```
+
+Dans le cadre d'un `INSERT` si vous voulez récupérer l'id de ce que vous venez d'insérer, utilisez `lastInsertId` :
+
+```php
+$query = $db->prepare("INSERT INTO users (id, first_name, last_name) VALUES (NULL, ':first_name', ':last_name')");
+$parameters = [
+    'first_name' => 'Tony',
+    'last_name' => 'Stark'
+];
+$query->execute($parameters);
+$userId = $db->lastInsertId();
+```
 
 ---
 
@@ -143,7 +170,7 @@ if (isset($_GET['id'])) {
     // PDO va cleaner les paramètres puis exécuter la requête
     $query->execute($parameters);
 	
-    $movie = $query->fetch(PDO::FETCH_ASSOC);
+    $user = $query->fetch(PDO::FETCH_ASSOC);
 }
 
 ```

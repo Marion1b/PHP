@@ -49,6 +49,7 @@ h2{
 header{
     text-align: center;
     text-transform: uppercase;
+    margin-top: 50px;
 }
 
 ul{
@@ -62,6 +63,16 @@ ul{
     display: flex;
     justify-content: space-around;
     margin: 50px;
+}
+
+.navbar-header a{
+    padding-bottom: 5px;
+    transition: all 200ms ease-in;
+}
+
+.navbar-header a:hover{
+    color: var(--yellow);
+    border-bottom: var(--yellow) 3px solid;
 }
 
 .all-league{

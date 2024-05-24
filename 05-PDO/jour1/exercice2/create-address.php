@@ -23,9 +23,9 @@
                 )");
 
         $parameters = [
-            ':street' => $street,
-            ':city' => $city,
-            ':zipcode' => $zipcode
+            'street' => $street,
+            'city' => $city,
+            'zipcode' => $zipcode
         ];
 
         $query->execute($parameters);
