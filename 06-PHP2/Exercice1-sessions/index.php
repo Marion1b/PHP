@@ -17,5 +17,8 @@
         <input type="text" name="pseudo" id="pseudo">
         <button type="submit">send</button>
     </form>
+
+    <a href="logout.php">Déconnexion</a>
+
 </body>
 </html>

@@ -1,8 +1,9 @@
 <?php
 
+    session_start();
 
     if(!empty($_SESSION["pseudo"])){
-        echo "Bienvenue" . $_SESSION["pseudo"];
+        echo "Bienvenue " . $_SESSION["pseudo"];
     }else{
         echo "Bienvenue invité-e";
     }
