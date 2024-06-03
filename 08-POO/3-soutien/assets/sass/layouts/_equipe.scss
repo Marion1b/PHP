@@ -1,0 +1,80 @@
+#equipe main {
+
+    & > section {
+      height:100%;
+      background-image: url("../img/friends.png");
+      padding-top: 5rem;
+      display: grid;
+      grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+      grid-template-rows: 0.2fr 1fr;
+
+      h2 {
+        grid-column: 1 / 6;
+        text-align: center;
+        margin-bottom: 5rem;
+        padding:1.5rem;
+        font-size: 4rem;
+        background-color: $red;
+        color:$white;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      ul {
+        grid-column: 2 / 5;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
+
+        li {
+
+          &:first-of-type {
+            color:$green;
+          }
+
+          &:nth-of-type(2) {
+            color:$purple;
+          }
+
+          &:last-of-type {
+            color:$blue;
+          }
+
+          article {
+
+            background-color:$white;
+            padding-bottom: 2rem;
+            border-radius: 5px;
+
+            header {
+
+              figure {
+                width:100%;
+
+                img {
+                  width:100%;
+                }
+              }
+
+              h3 {
+                padding: 1rem 0;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+              }
+            }
+
+            h4 {
+              padding: 1rem 0;
+              font-size: 1.2rem;
+              text-align: center;
+            }
+
+            p {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+}

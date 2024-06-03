@@ -1,0 +1,44 @@
+@import "libs/reset";
+
+/* VARS */
+@import "vars";
+
+/* PARTIALS */
+@import "partials/header";
+@import "partials/footer";
+
+/* LAYOUTS */
+@import "layouts/home";
+@import "layouts/critiques";
+@import "layouts/equipe";
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width:100vw;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+
+  &#home {
+    grid-template-rows: 10vh 160vh 20vh;
+  }
+
+  &#critiques {
+    grid-template-rows: 10vh 100vh 20vh;
+  }
+
+  &#equipe {
+    grid-template-rows: 10vh 90vh 20vh;
+  }
+
+  overflow-x: hidden;
+  color:$black;
+}
+
+.sr-only {
+  display: none;
+}

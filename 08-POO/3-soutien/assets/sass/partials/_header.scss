@@ -1,0 +1,56 @@
+body > header {
+  display: grid;
+  grid-template-columns: 0.1fr 0.9fr;
+  background-color: $blue;
+  color:$white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+
+  & > figure {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+
+    & > img {
+      width:100%;
+      align-self: center;
+      justify-self: center;
+    }
+
+    & > figcaption {
+      align-self: center;
+      justify-self: center;
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  & > nav {
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      height:100%;
+
+      li {
+        align-self: center;
+        justify-self: center;
+
+        a {
+          text-transform: uppercase;
+          color:$white;
+          font-size: 1.2rem;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 1.1rem;
+            text-decoration-color: $red;
+            text-decoration-thickness: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
