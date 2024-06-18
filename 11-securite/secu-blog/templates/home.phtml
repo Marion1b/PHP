@@ -1,0 +1,14 @@
+<main id="home" class="py-5 px-3">
+    <h1 class="mb-5">Secured Blog</h1>
+
+    <h2 class="mt-5">Latest posts</h2>
+    <ul class="row mt-5">
+        <?php
+
+        $bc = new BlogController;
+        $bc->displayPostsHome();
+
+        
+        ?>
+    </ul>
+</main>

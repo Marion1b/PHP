@@ -1,0 +1,34 @@
+<?php
+
+$pm = new PostManager;
+$post=$pm->findOne($_GET["post_id"]);
+$title = $post->getTitle();
+$excerpt = $post->getExcerpt();
+$content = $post->getcontent();
+$author = $post->getAuthor()->getUsername();
+$created_at = $post->getCreatedAt();
+$categories = $post->getCategory();
+
+?>
+<?=
+
+"
+<h1 class='mb-5'>Secured Blog</h1>
+<h2 class='mt-5 mb-5'>$title</h2>
+<h3 class='mb-5'>$excerpt</h3>
+$content
+<p>$created_at</p>
+<p>$author</p>"
+
+?>
+
+<?php
+
+foreach($categories as $category){
+    $titleCategory = $category->getTitle();
+    echo "
+    <p>$titleCategory</p>
+    ";
+}
+
+?>

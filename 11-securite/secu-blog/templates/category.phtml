@@ -1,0 +1,20 @@
+<main id="category" class="py-5 px-3">
+    <h1 class="mb-5">Secured Blog</h1>
+
+    <h2 class="mt-5">
+        <?php
+        $cm = new CategoryManager;
+        $category=$cm->findOne($_GET["category_id"]);
+        $name = $category->getTitle();
+        echo $name;
+        ?>
+    </h2>
+    <ul class="row mt-5">
+        <?php
+
+        $bc = new BlogController;
+        $bc->displayCategoryPosts();
+
+        ?>
+    </ul>
+</main>
