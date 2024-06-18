@@ -30,20 +30,19 @@ class AuthController extends AbstractController
 
         if($email === true && $password === true){
             $safeEmail = htmlspecialchars($_POST["email"]);
-            $safePassword = htmlspecialchars($_POST["password"]);
+            $safePassword = $_POST["password"];
             $um = new UserManager;
             $user = $um->findByEmail($safeEmail);
             if($user !==null){
                 $hashFound = $user->getPassword();
                 $isPasswordCorrect = password_verify($safePassword, $hashFound);
                 if($isPasswordCorrect === true){
+                    $csrft = new CSRFTokenManager;
                     $_SESSION["user"] = $user;
+                    $_SESSION["user"]->setEmail($csrft->generateCSRFToken());
                     $this->redirect("index.php");
                 }else{
-                    // $this->redirect("index.php?route=login");
-                    var_dump($safeEmail ." ".$safePassword);
-                    var_dump($hashFound);
-                    var_dump($isPasswordCorrect);
+                    $this->redirect("index.php?route=login");
                 }
             }else{
                 $this->redirect("index.php?route=login");

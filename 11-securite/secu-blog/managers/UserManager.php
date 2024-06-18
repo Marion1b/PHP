@@ -52,7 +52,7 @@ class UserManager extends AbstractManager
         $parameters = [
             'username' => $user->getUsername(),
             'email' => $user->getEmail(),
-            'password' =>password_hash($user->getPassword(), PASSWORD_DEFAULT),
+            'password' =>$user->getPassword(),
             'role' => $user->getRole(),
             'created_at'=>date("Y-m-d H:i:s")
         ];
